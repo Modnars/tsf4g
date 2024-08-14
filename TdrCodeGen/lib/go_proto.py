@@ -445,7 +445,7 @@ func (this *{{sname}}) UnpackFrom(cutVer uint32, r *tdrcom.Reader) error {
     }
     // check version
     if cutVer < {{c_get_base_version_name(sname)}} {
-        errors.New("{{sname}} cut version must large than {{c_get_base_version_name(sname)}}\n")
+        return errors.New("{{sname}} cut version must large than {{c_get_base_version_name(sname)}}\n")
     }
 % end
 
